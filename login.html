@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function login(event) {
+            event.preventDefault(); // منع الإرسال التلقائي للنموذج
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // تحقق من اسم المستخدم وكلمة المرور
+            if (username === 'admin' && password === 'password') { // استخدم بياناتك هنا
+                // إذا كانت بيانات الاعتماد صحيحة، انتقل إلى الصفحة الرئيسية
+                window.location.href = 'index.html'; // انتقل إلى الصفحة الرئيسية
+            } else {
+                alert('اسم المستخدم أو كلمة المرور غير صحيحة.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">محطات الوقود</h1>
+        </div>
+    </header>
+    <main>
+        <section class="login">
+            <h2>تسجيل الدخول</h2>
+            <form onsubmit="login(event)">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">دخول</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 محطات الوقود. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

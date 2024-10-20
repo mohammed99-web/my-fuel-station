@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع - محطة الوقود</title>
+    <link rel="stylesheet" href="7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>محطة الوقود - صفحة الدفع</h1>
+        <form id="payment-form">
+            <div class="fuel-selection">
+                <label for="fuel-type">اختر نوع الوقود:</label>
+                <select id="fuel-type" name="fuel-type">
+                    <option value="petrol">بنزين</option>
+                    <option value="diesel">ديزل</option>
+                    <option value="electric">كهرباء</option>
+                </select>
+            </div>
+            <div class="fuel-quantity">
+                <label for="quantity">كمية الوقود (باللتر):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+            </div>
+            <div class="payment-methods">
+                <h2>اختر طريقة الدفع:</h2>
+                <label>
+                    <input type="radio" name="payment" value="cash" required> نقداً
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="bankak" required> تطبيق بنكك
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="fasal" required> بنك فيصل فوري
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="ocash" required> تطبيق أو كاش
+                </label>
+            </div>
+            <button type="submit">الدفع الآن</button>
+        </form>
+    </div>
+
+    <script>
+        // توجيه المستخدم إلى صفحة الدفع الخاصة بتطبيق بنكك
+        document.getElementById("payment-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+            if (paymentMethod === "bankak") {
+                // تحويل المستخدم إلى صفحة الدفع الخاصة بتطبيق بنكك
+                window.location.href = "bankak-payment.html";
+            } else {
+                alert("الرجاء اختيار طريقة دفع صحيحة أو إكمال التحقق المناسب.");
+            }
+        });
+    </script>
+</body>
+</html>
