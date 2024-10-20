@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محطة وقود</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .services, .fuel-info {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>محطة وقود النجوم</h1>
+    <p>مرحبًا بكم في محطة وقود النجوم، حيث نقدم أفضل الخدمات لتلبية احتياجاتكم من الوقود.</p>
+
+    <div class="fuel-info">
+        <h2>تفاصيل الوقود</h2>
+        <p><strong>كمية الوقود المتوفرة:</strong> 5000 لتر</p>
+        <p><strong>قيمة البيع:</strong> 1.20 دينار لكل لتر</p>
+    </div>
+
+    <div class="services">
+        <h2>الخدمات المتوفرة</h2>
+        <ul>
+            <li>تعبئة الوقود</li>
+            <li>محل لبيع المستلزمات</li>
+            <li>غسيل سيارات</li>
+            <li>مقهى ومطعم خفيف</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>للمزيد من المعلومات، تواصل معنا عبر الهاتف: 0123456789</p>
+    </footer>
+</div>
+
+</body>
+</html>
